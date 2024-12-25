@@ -27,7 +27,7 @@ try:
         time.sleep(2)
         # 接收数据
         recv = ser.read(6)
-        print(f"Received: {recv.hex()}")
+        print(f"Received: {recv}")
         time.sleep(5)  # 每隔5秒发送一次
 except KeyboardInterrupt:
     print("Test interrupted by user.")
