@@ -35,6 +35,8 @@ fn task(serial: &mut Box<dyn SerialPort>, n: u32, log_file: &mut std::fs::File) 
         ]
         .as_ref(),
     )?;
+
+    serial.flush()?;
     Ok(())
 }
 
