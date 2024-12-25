@@ -21,9 +21,12 @@ def send_data(n):
 try:
     while True:
         # 发送一个测试的n值
-        n = 12345678  # 你可以修改这个值
+        n = 2  # 你可以修改这个值
         send_data(n)
         print(f"Sent: 0xeb 0x90 {n:#010x}")
+        # 接收数据
+        recv = ser.read(6)
+        print(f"Received: {recv.hex()}")
         time.sleep(5)  # 每隔5秒发送一次
 except KeyboardInterrupt:
     print("Test interrupted by user.")
