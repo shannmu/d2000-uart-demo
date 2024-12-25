@@ -24,6 +24,7 @@ try:
         n = 2  # 你可以修改这个值
         send_data(n)
         print(f"Sent: 0xeb 0x90 {n:#010x}")
+        time.sleep(2)
         # 接收数据
         recv = ser.read(6)
         print(f"Received: {recv.hex()}")
